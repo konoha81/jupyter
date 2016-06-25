@@ -1,0 +1,48 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:          sage-math
+# Required-Start:    
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:
+# Short-Description: 
+### END INIT INFO
+
+export HOME="/home/vagrant"
+
+# configuration
+SAGE_PATH="/usr/bin/"
+SAGE_OPTS="-n jupyter"
+SAGE_LOG="/var/log/sage.log"
+# commands
+CMD_ECHO="/bin/echo"
+CMD_GREP="/bin/grep"
+CMD_SLEEP="/bin/sleep"
+CMD_KILLALL="/usr/bin/killall"
+sage_start() {
+        $CMD_ECHO "Starting Sage..."
+        $SAGE_PATH/sage $SAGE_OPTS >> $SAGE_LOG 2>&1 &
+}
+sage_stop() {
+        $CMD_ECHO "Stopping Sage..."
+        # CAUTION : maybe you kill something important in your server
+        $CMD_KILLALL python
+}
+case $1 in
+        start)
+                sage_start
+                ;;
+        stop)
+                sage_stop
+                ;;
+        restart)
+                sage_stop
+                $CMD_SLEEP 5
+                sage_start
+                ;;
+        *)
+                $CMD_ECHO "Use: $0 {start|stop|restart}"
+                exit 1
+                ;;
+esac
+exit 0
