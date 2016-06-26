@@ -20,6 +20,6 @@ VirtualBoxは、以下のダウンロードサイトからお使いの環境に�
 - https://www.virtualbox.org/wiki/Downloads
 
 
-<small id="note1">私のMacOSは10.7.5と古いため、VirtualBoxのバージョンは4.3.12を使用。</small>
-
-<small id="note2">今回使用したバージョンは1.8.4です。</small>
+# 脚注
+- <small id="note1">1: 私のMacOSは10.7.5と古いため、VirtualBoxのバージョンは4.3.12を使用。</small>
+- <small id="note2">2: 今回使用したバージョンは1.8.4です。</small>
