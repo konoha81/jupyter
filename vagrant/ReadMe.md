@@ -10,8 +10,8 @@ Pandasやtheano等のpythonパッケージを使ったnotebookが増えてくる
 # 2. 必要なアプリケーションのインストール
 
 環境構築に必要なアプリケーションは、以下の２つです。
-- VirtualBox: 無料で使用できるx86仮想化ソフトウェアです。Ubuntu14.04の仮想環境を実行するために使用します。[^1]: 私のMacOSは10.7.5と古いため、VirtualBoxのバージョンは4.3.12を使用。
-- Vagrant: 仮想環境を構築し、実行するためのツールです。[^2]: 今回使用したバージョンは1.8.4です。
+- VirtualBox: 無料で使用できるx86仮想化ソフトウェアです。Ubuntu14.04の仮想環境を実行するために使用します。[私のMacOSは10.7.5と古いため、VirtualBoxのバージョンは4.3.12を使用。][1]
+- Vagrant: 仮想環境を構築し、実行するためのツールです。[今回使用したバージョンは1.8.4です。][2]
 
 ## 2.1. VirtualBoxのインストール
 ![VirtualBox Logo](https://www.virtualbox.org/graphics/vbox_logo2_gradient.png "VirtualBox Logo")
