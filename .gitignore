@@ -1,4 +1,4 @@
-vagrant/.jupyter	
-vagrant/.vagrant	
-vagrant/.sage
-vagrant/.local
+vagrant/.jupyter/
+vagrant/.vagrant/	
+vagrant/.sage/
+vagrant/.local/
