@@ -4,8 +4,7 @@ Sageでもjupyterのnotebookがスタンダードになり、Sageだけでなく
 Pandasやtheano等のpythonパッケージを使ったnotebookが増えてくると思います。
 
 自分の紹介するnotebookを実行するのに必要な環境も含めて公開し、
-誰でも同じ結果を得ることができるようにVagrantを使ってVirtualBoxのVM環境を
-構築する方法を紹介します。
+誰でも同じ結果を得ることができるようにVagrantを使ってVirtualBoxのVM環境を構築する方法を紹介します。
 
 # 2. 必要なアプリケーションのインストール
 
@@ -16,9 +15,28 @@ Pandasやtheano等のpythonパッケージを使ったnotebookが増えてくる
 ## 2.1. VirtualBoxのインストール
 ![VirtualBox Logo](https://www.virtualbox.org/graphics/vbox_logo2_gradient.png "VirtualBox Logo")
 
-VirtualBoxは、以下のダウンロードサイトからお使いの環境に合わせてダウンロードしてください。
+VirtualBoxは、以下のダウンロードサイトからお使いの環境に合わせてダウンロードし、インストールしてください。
 - https://www.virtualbox.org/wiki/Downloads
 
+
+## 2.2. Vagrantのインストール
+
+Vagrant（ベイグラント）は、以下のダウンロードサイトからお使いの環境に合わせてダウンロードし、インストールしてください。
+- https://www.vagrantup.com/downloads.html
+
+# 3. SageMathのインストール
+準備ができましたので、SageMathをVirtualBoxの仮想マシンで動くようにします。
+
+## 3.1. vagrantファイルのダウンロード
+Githubの以下のURLからjupyter用のnotebookとvagrant環境構築用ファイルをダウンロードします。
+
+以下のGitコマンドを使って必要なファイルをダウンロードします。
+```
+$ git clone https://github.com/take-pwave/jupyter.git
+```
+
+gitコマンドが使えない場合には、以下のURLの「Clone or download」をクリックし、Download ZIPを選択してください。
+- https://github.com/take-pwave/jupyter
 
 ## 脚注
 - <small id="note1">1: 私のMacOSは10.7.5と古いため、VirtualBoxのバージョンは4.3.12を使用。</small>
