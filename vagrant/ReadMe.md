@@ -30,13 +30,20 @@ Vagrant（ベイグラント）は、以下のダウンロードサイトから�
 ## 3.1. vagrantファイルのダウンロード
 Githubの以下のURLからjupyter用のnotebookとvagrant環境構築用ファイルをダウンロードします。
 
-以下のGitコマンドを使って必要なファイルをダウンロードします。
+ターミナルソフトを起動し、以下のGitコマンドを使って必要なファイルをダウンロードします。
 ```
 $ git clone https://github.com/take-pwave/jupyter.git
 ```
 
 gitコマンドが使えない場合には、以下のURLの「Clone or download」をクリックし、Download ZIPを選択してください。
 - https://github.com/take-pwave/jupyter
+
+## 3.2. boxファイルのダウンロード
+次に、SageをインストールするUbuntu14.04のboxファイルをダウンロードします。ダウンロードされたboxは、~/.vagrant.d/boxes/に保存されます。
+
+```bash
+$ vagrant box add SageMath7.2 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
+```
 
 ## 脚注
 - <small id="note1">1: 私のMacOSは10.7.5と古いため、VirtualBoxのバージョンは4.3.12を使用。</small>
