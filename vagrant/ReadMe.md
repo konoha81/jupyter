@@ -64,6 +64,27 @@ $ vagrant up
 $ vagrant reload
 ```
 
+## 3.4. 仮想マシンの停止
+仮想マシンを終了するには、以下のコマンドを入力してください。
+
+```bash
+$ vagrant halt
+```
+
+## 4. SageMathを使ってみる
+ブラウザーで以下のURLを開きます。
+```
+http://localhost:8888/
+```
+
+jupyterの初期画面が表示されます。
+
+![jupyter screen](images/jupyter_screen.png)
+
+新しくノートブックを作成する場合には、ここで表示されているnotebookディレクトリに中で作成してください。
+
+### 4.1. ノートブックを見る
+
 
 
 ## 途中で失敗した場合
