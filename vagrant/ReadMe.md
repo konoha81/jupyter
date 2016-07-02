@@ -96,7 +96,7 @@ File, Edit等のメニューが並んでいる右端には、現在実行して�
 
 
 ### 4.2. ノートブックファイルの場所
-jupyterのnotebook内に作成されたファイルは、vagrantのファイル共有機能を使って仮想マシンを実行しているマシン（ホストマシン）のDOWNLOAD_DIR/vagrant/notebookに作成されます。
+jupyterのnotebook内に作成されたファイルは、vagrantのファイル共有機能を使って仮想マシンを実行しているマシン（ホストマシン）のDOWNLOAD_DIR/vagrant/notebookに保存されます。
 
 作成したノートブックのバックアップやファイルの追加・削除もホストマシンで簡単にできます。
 
