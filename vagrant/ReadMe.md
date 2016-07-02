@@ -41,6 +41,7 @@ gitコマンドが使えない場合には、以下のURLの「Clone or download
 ## 3.2. boxファイルのダウンロード
 次に、SageをインストールするUbuntu14.04のboxファイルをダウンロードします。ダウンロードされたboxは、~/.vagrant.d/boxes/に保存されます。
 
+以下の$ の後のコマンドを入力してください（コピーして、ペーストすると簡単です）。
 
 ```bash
 $ vagrant box add SageMath7.2 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
@@ -48,7 +49,7 @@ $ vagrant box add SageMath7.2 https://cloud-images.ubuntu.com/vagrant/trusty/cur
 
 ## 3.3. 仮想マシンの起動
 jupyterをダウンロードしたディレクトリをDOWNLOAD_DIRとします。
-ターミナルソフトを起動して、以下のコマンドを入力してください。
+ターミナルソフトを起動して、以下のコマンドを入力してください（$ の後のコマンドを入力）。
 
 ```bash
 $ cd DOWNLOAD_DIR/vagrant
@@ -58,14 +59,14 @@ $ vagrant up
 仮想マシンが起動して、SageMath用のパッケージが自動的にダウンロードされ、セットされます。
 1.5GB程度のファイルをダウンロードするため、完了すまでにはかなりの時間が掛かります。
 
-インストール直後は、コンフィグ情報が正しくセットされないため、再度起動します。
+インストール直後は、コンフィグ情報が正しくセットされないため、再度起動します（$ の後のコマンドを入力）。
 
 ```bash
 $ vagrant reload
 ```
 
 ## 3.4. 仮想マシンの停止
-仮想マシンを終了するには、以下のコマンドを入力してください。
+仮想マシンを終了するには、以下のコマンドを入力してください（$ の後のコマンドを入力）。
 
 ```bash
 $ vagrant halt
@@ -101,12 +102,29 @@ jupyterのnotebook内に作成されたファイルは、vagrantのファイル�
 
 ![jupyter screen](images/notebook_dir.png)
 
-## 途中で失敗した場合
+## 5. パッケージの追加
+パッケージを追加したり、処理が途中で終わった場合には、以下のコマンドで仮想マシンにSSHでログインして操作します（$ の後のコマンドを入力）。
+```bash
+$ vagrant ssh
+Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-86-generic x86_64)
+途中省略
+vagrant@vagrant-ubuntu-trusty-64:~$ 
+```
+
+次に仮想マシンでのコマンドは、vagrant@で始まります。$ の後のsudo sage -shを入力してください。
+最初にワーニングが表示されますが、パッケージのインストール後にexitコマンドで終了することを忘れなければ問題ありません。
+
+これで、Sageの環境にパッケージを追加することができます。pythonの場合には、pipコマンドを使って必要なパッケージをインストールしてください。
+
+SSHを終了するには、(sage-sh) のプロンプトとvagrant@のプロンプトの2カ所でexitすることを忘れないでください。
+
 
 ```bash
-$ sudo sage -sh
-
-(sage) $ exit
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo sage -sh
+sys:1: RuntimeWarning: not adding directory '' to sys.path since it's not owned by a trusted user.
+途中省略
+Note: SAGE_ROOT=/usr/lib/sagemath
+(sage-sh) root@vagrant-ubuntu-trusty-64:~$ 
 ```
 
 ## 脚注
