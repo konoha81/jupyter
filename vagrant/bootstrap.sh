@@ -9,6 +9,9 @@ cp -r /vagrant/.jupyter /home/vagrant/
 ln -s /etc/init.d/sage_daemon /etc/rc2.d/S99sage
 ln -s /vagrant/notebook /home/vagrant/notebook
 
+# SageMathで日本語を正しく処理できるようにsitecustomize.pyをコピー
+cp /vagrant/sitecustomize.py /usr/lib/sagemath/local/lib/python2.7/site-packages/
+
 sage -sh <<\EOF
 pip install pandas
 exit 0
