@@ -41,8 +41,37 @@ gitコマンドが使えない場合には、以下のURLの「Clone or download
 ## 3.2. boxファイルのダウンロード
 次に、SageをインストールするUbuntu14.04のboxファイルをダウンロードします。ダウンロードされたboxは、~/.vagrant.d/boxes/に保存されます。
 
+
 ```bash
 $ vagrant box add SageMath7.2 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
+```
+
+## 3.3. 仮想マシンの起動
+jupyterをダウンロードしたディレクトリをDOWNLOAD_DIRとします。
+ターミナルソフトを起動して、以下のコマンドを入力してください。
+
+```bash
+$ cd DOWNLOAD_DIR/vagrant
+$ vagrant up
+```
+
+仮想マシンが起動して、SageMath用のパッケージが自動的にダウンロードされ、セットされます。
+1.5GB程度のファイルをダウンロードするため、完了すまでにはかなりの時間が掛かります。
+
+インストール直後は、コンフィグ情報が正しくセットされないため、再度起動します。
+
+```bash
+$ vagrant reload
+```
+
+
+
+## 途中で失敗した場合
+
+```bash
+$ sudo sage -sh
+
+(sage) $ exit
 ```
 
 ## 脚注
