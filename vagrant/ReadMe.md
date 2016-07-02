@@ -81,11 +81,25 @@ jupyterの初期画面が表示されます。
 
 ![jupyter screen](images/jupyter_screen.png)
 
-新しくノートブックを作成する場合には、ここで表示されているnotebookディレクトリに中で作成してください。
+新しくノートブックを作成する場合には、ここで表示されているnotebookディレクトリ中で作成してください。
 
 ### 4.1. ノートブックを見る
+ブラウザーに表示された「notebook」をクリックし、その中の「GettingStart.ipynb」をクリックしてください。
+
+以下の様に「GettingStart」ノートブックの内容が表示されます。
+
+![jupyter screen](images/GettingStart_nb.png)
+
+File, Edit等のメニューが並んでいる右端には、現在実行しているカーネル（ここではSageMath 7.2）の種類が表示されます。
+もしも現在稼働中のカーネルが異なっている場合には、「Kernel」→「Change kernel」メニューから「SageMath 7.2」を選択してください。
 
 
+### 4.2. ノートブックファイルの場所
+jupyterのnotebook内に作成されたファイルは、vagrantのファイル共有機能を使って仮想マシンを実行しているマシン（ホストマシン）のDOWNLOAD_DIR/vagrant/notebookに作成されます。
+
+作成したノートブックのバックアップやファイルの追加・削除もホストマシンで簡単にできます。
+
+![jupyter screen](images/notebook_dir.png)
 
 ## 途中で失敗した場合
 
