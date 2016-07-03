@@ -47,14 +47,6 @@ class Graphics2Html:
   def _repr_html_(self):
     return self._html
 
-class Animation2Html:
-  def __init__(self, animation):
-    filename = os.path.join(SAGE_TMP, 'junk.gif')
-    animation.save(filename)
-    _img = Image(filename)
-    os.remove(filename)
-    self._html =  "<img src='data:image/gif;base64," +  base64.b64encode(_img.data) + "'/>"
-
 # Sageのhtml.tableでは日本語が化けて表示されないので、HTML版を作成（by Hiroshi TAKEMOTO）
 class Table2Html:
   def __init__(self, tbl, header=[]):
