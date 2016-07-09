@@ -44,7 +44,7 @@ Gitでcloneを作った場合、ブランチを作成しておくと追加され
 ```bash
 $ cd jupyter
 $ git branch develop
-$ git checkout devlop
+$ git checkout develop
 ```
 
 gitコマンドが使えない場合には、以下のURLの「Clone or download」をクリックし、Download ZIPを選択してください。
