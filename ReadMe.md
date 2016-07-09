@@ -167,7 +167,7 @@ $ git checkout develop
 $ git rebase master
 ```
 
-## boxファイルを他のマシンで使用
+## 6. boxファイルを他のマシンで使用
 複数のマシンでSageMathを使いたい場合、毎回boxファイルのダウンロードに時間が掛かってしまい大変です。
 
 自分の環境のMySageMath仮想マシンからboxファイルを作成し、他のマシンで使用する方法を紹介します。
