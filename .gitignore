@@ -1,4 +1,6 @@
 vagrant/.vagrant/
 vagrant/.sage/
 vagrant/.local/
+vagrant/.ipynb_checkpoints
 MySageMath/.vagrant
+MySageMath/.ipynb_checkpoints
