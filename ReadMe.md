@@ -137,6 +137,58 @@ jupyterのnotebook内に作成されたファイルは、vagrantのファイル�
 
 ![jupyter screen](images/notebook_dir.png)
 
+## 5. Githubの更新情報を取り込む
+これまで作成したSageのノートブックをjupyterに移植するため、Githubの内容は日々更新されます。
+
+gitコマンドを使って安全にGithubの更新情報を取り込む方法を説明します。
+
+最初に作業中のブランチがdevelopであることを確認します。
+developに*が付いており、作業中のブランチがdevelopであることを確認できました。
+```bash
+$ git branch
+* develop
+  master
+```
+次に、現在の作業をコミットします。ここではコミットのコメントを'temp snap'としました。
+```bash
+$ git add .
+$ git commit -m 'temp snap'
+```
+
+ブランチをmasterに変更し、Githubの更新を取り込みます。
+```bash
+$ git checkout master
+$ git pull
+```
+
+再度、ブランチをdevelopに切換、masterへの変更をdevelopに取り込みます。
+```bash
+$ git checkout develop
+$ git rebase master
+```
+
+## boxファイルを他のマシンで使用
+複数のマシンでSageMathを使いたい場合、毎回boxファイルのダウンロードに時間が掛かってしまい大変です。
+
+自分の環境のMySageMath仮想マシンからboxファイルを作成し、他のマシンで使用する方法を紹介します。
+
+以下のコマンドで現在使用しているMySageMath仮想マシンのboxファイルを作成します。
+```bash
+$ cd DOWNLOAD_DIR/MySageMath
+$ vagrant package
+==> default: Clearing any previously set forwarded ports...
+==> default: Exporting VM...
+==> default: Compressing package to: /Users/take/proj/jupyter/MySageMath/package.box
+
+```
+
+これで、package.boxファイル（3.81GB）が出来上がります。
+USBメモリ等でpackage.boxを他のマシンにコピーし、以下のコマンドを使って取り込みます。
+作業が完了すれば、package.boxは不要なので削除します。
+```bash
+$ vagrant box add MySageMath package.box
+$ rm package.box
+```
 
 ## 脚注
 - <small id="note1">1: 私のMacOSは10.7.5と古いため、VirtualBoxのバージョンは4.3.12を使用。</small>
