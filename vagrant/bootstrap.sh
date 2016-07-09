@@ -14,12 +14,5 @@ cp /vagrant/sitecustomize.py /usr/lib/sagemath/local/lib/python2.7/site-packages
 
 sage -sh <<\EOF
 pip install pandas
-pip install ggplot
 exit 0
-EOF
-
-sage -R <<\EOF
-options(repos='http://cran.us.r-project.org')
-install.packages('ggplot2')
-install.packages('jsonlite')
 EOF
