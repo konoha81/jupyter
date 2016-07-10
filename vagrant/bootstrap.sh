@@ -3,6 +3,7 @@
 apt-add-repository -y ppa:aims/sagemath
 apt-get update
 apt-get install -y sagemath-upstream-binary-full
+apt-get install -y libmagickwand-dev	# for Wand
 
 cp /vagrant/sage_daemon /etc/init.d/
 cp -r /vagrant/.jupyter /home/vagrant/
@@ -15,6 +16,7 @@ cp /vagrant/sitecustomize.py /usr/lib/sagemath/local/lib/python2.7/site-packages
 sage -sh <<\EOF
 pip install pandas
 pip install ggplot
+pip install Wand
 exit 0
 EOF
 
