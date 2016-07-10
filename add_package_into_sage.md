@@ -108,19 +108,19 @@ Save workspace image? [y/n/c]: n
 vagrant@vagrant-ubuntu-trusty-64:~$
 ```
 
-# 3. MySageMathにインストールされている(したい)パッケージ
+# 4. MySageMathにインストールされている(したい)パッケージ
 
-## 3.1 Ubuntuパッケージ
+## 4.1 Ubuntuパッケージ
 
 - libmagickwand-dev	（これは、Wand用です）
 
-## 3.2 pythonパッケージ
+## 4.2 pythonパッケージ
 
 - pandas 
 - ggplot 0.10.0
 - Wand 0.4.3
 
-## 3.3 Rパッケージ
+## 4.3 Rパッケージ
 
 - ggplot2
 - jsonlite
