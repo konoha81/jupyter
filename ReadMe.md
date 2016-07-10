@@ -190,6 +190,8 @@ $ vagrant box add MySageMath package.box
 $ rm package.box
 ```
 
-## 脚注
-- <small id="note1">1: 私のMacOSは10.7.5と古いため、VirtualBoxのバージョンは4.3.12を使用。</small>
-- <small id="note2">2: 今回使用したバージョンは1.8.4です。</small>
+## 5. パッケージ関連
+MySageMathのboxにインストールされている（あるいはしたい）パッケージは、
+以下のページを参照してください。
+
+- [SageMathへのパッケージの追加方法](add_package_into_sage.md)
