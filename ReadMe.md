@@ -190,7 +190,7 @@ $ vagrant box add MySageMath package.box
 $ rm package.box
 ```
 
-## 5. パッケージ関連
+## 7. パッケージ関連
 MySageMathのboxにインストールされている（あるいはしたい）パッケージは、
 以下のページを参照してください。
 
