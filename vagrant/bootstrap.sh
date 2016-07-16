@@ -17,6 +17,7 @@ sage -sh <<\EOF
 pip install pandas
 pip install ggplot
 pip install Wand
+pip install seaborn
 exit 0
 EOF
 
