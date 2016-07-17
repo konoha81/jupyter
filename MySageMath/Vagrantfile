@@ -8,6 +8,7 @@ Vagrant.configure(2) do |config|
   config.vm.box_url = "http:www15191ue.sakura.ne.jp/pub/package.box"
 
   config.vm.network :forwarded_port, guest: 8888, host: 8888
+  # config.vm.network "public_network"
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
     # vb.gui = true

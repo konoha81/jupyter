@@ -25,4 +25,5 @@ sage -R <<\EOF
 options(repos='http://cran.us.r-project.org')
 install.packages('ggplot2')
 install.packages('jsonlite')
+install.packages('glmmML')
 EOF
