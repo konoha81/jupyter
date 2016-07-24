@@ -4,6 +4,7 @@ apt-add-repository -y ppa:aims/sagemath
 apt-get update
 apt-get install -y sagemath-upstream-binary-full
 apt-get install -y libmagickwand-dev	# for Wand
+apt-get install -y jags pkg-config
 
 cp /vagrant/sage_daemon /etc/init.d/
 cp -r /vagrant/.jupyter /home/vagrant/
@@ -18,12 +19,19 @@ pip install pandas
 pip install ggplot
 pip install Wand
 pip install seaborn
+pip install pyjags
 exit 0
 EOF
+
+wget https://cran.r-project.org/src/contrib/Archive/rjags/rjags_3-15.tar.gz
 
 sage -R <<\EOF
 options(repos='http://cran.us.r-project.org')
 install.packages('ggplot2')
 install.packages('jsonlite')
 install.packages('glmmML')
+install.packages("coda")
+install.packages("rjags_3-15.tar.gz", repo=NULL, type="source")
 EOF
+
+rm -f rjags_3-15.tar.gz

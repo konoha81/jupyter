@@ -113,14 +113,30 @@ vagrant@vagrant-ubuntu-trusty-64:~$
 ## 4.1 Ubuntuパッケージ
 
 - libmagickwand-dev	（これは、Wand用です）
+- pkg-config
+- jags 3.4.0
 
 ## 4.2 pythonパッケージ
 
 - pandas 
 - ggplot 0.10.0
 - Wand 0.4.3
+- seaborn 0.7.1
+- pyjags
 
 ## 4.3 Rパッケージ
 
 - ggplot2
 - jsonlite
+- glmmML
+- coda
+- rjags from source
+
+apt-getでインストールしたjagsのバージョンが3.4.0のため、以下の手順でrjags3.15をインストールします。
+#pre{{
+$ wget https://cran.r-project.org/src/contrib/Archive/rjags/rjags_3-15.tar.gz
+$ sudo sage -R <<EOF
+install.packages("rjags_3-15.tar.gz", repo=NULL, type="source")
+EOF
+
+}}
