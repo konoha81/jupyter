@@ -3,3 +3,5 @@ vagrant/.sage/
 vagrant/.local/
 MySageMath/.vagrant/
 **/.ipynb_checkpoints/
+
+MySageMath/notebook/kubo-book/data/.Rapp.history
