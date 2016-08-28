@@ -20,6 +20,7 @@ pip install ggplot
 pip install Wand
 pip install seaborn
 pip install pyjags
+pip install sklearn
 exit 0
 EOF
 
@@ -32,6 +33,8 @@ install.packages('jsonlite')
 install.packages('glmmML')
 install.packages("coda")
 install.packages("rjags_3-15.tar.gz", repo=NULL, type="source")
+install.packages("car")
+install.packages("FNN")
 EOF
 
 rm -f rjags_3-15.tar.gz
