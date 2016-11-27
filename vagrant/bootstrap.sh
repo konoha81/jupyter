@@ -5,6 +5,7 @@ apt-get update
 apt-get install -y sagemath-upstream-binary-full
 apt-get install -y libmagickwand-dev	# for Wand
 apt-get install -y jags pkg-config
+apt-get install -y gdal-bin
 
 cp /vagrant/sage_daemon /etc/init.d/
 cp -r /vagrant/.jupyter /home/vagrant/
@@ -21,6 +22,7 @@ pip install Wand
 pip install seaborn
 pip install pyjags
 pip install sklearn
+pip install xlsxWriter xlrd
 exit 0
 EOF
 
