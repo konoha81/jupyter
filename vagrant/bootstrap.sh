@@ -22,7 +22,7 @@ pip install Wand
 pip install seaborn
 pip install pyjags
 pip install sklearn
-pip install xlsxWriter xlrd
+pip install xlsxWriter xlrd xlwt
 pip install python-nvd3
 exit 0
 EOF
