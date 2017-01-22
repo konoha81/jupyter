@@ -6,6 +6,7 @@ apt-get install -y sagemath-upstream-binary-full
 apt-get install -y libmagickwand-dev	# for Wand
 apt-get install -y jags pkg-config
 apt-get install -y gdal-bin
+apt-get install -y mecab libmecab-dev mecab-ipadic-utf8
 
 cp /vagrant/sage_daemon /etc/init.d/
 cp -r /vagrant/.jupyter /home/vagrant/
@@ -24,6 +25,7 @@ pip install pyjags
 pip install sklearn
 pip install xlsxWriter xlrd xlwt
 pip install python-nvd3
+pip install mecab-python
 exit 0
 EOF
 
