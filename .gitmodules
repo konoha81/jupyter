@@ -1,0 +1,3 @@
+[submodule "MySageMath/notebook"]
+	path = MySageMath/notebook
+	url = https://github.com/take-pwave/notebook.git
