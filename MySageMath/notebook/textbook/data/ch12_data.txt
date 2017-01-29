@@ -1,5 +1,0 @@
-diabetes    status
-Type1    Poor
-Type2    Improved
-Type1    Excellent
-Type1    Poor
