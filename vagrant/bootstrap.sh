@@ -7,6 +7,10 @@ apt-get install -y libmagickwand-dev	# for Wand
 apt-get install -y jags pkg-config
 apt-get install -y gdal-bin
 apt-get install -y mecab libmecab-dev mecab-ipadic-utf8
+apt-get install -y build-essential cmake unzip 
+apt-get install -y libopenblas-dev liblapack-dev
+apt-get install -y libhdf5-serial-dev
+apt-get install -y graphviz
 
 cp /vagrant/sage_daemon /etc/init.d/
 cp -r /vagrant/.jupyter /home/vagrant/
@@ -26,6 +30,9 @@ pip install sklearn
 pip install xlsxWriter xlrd xlwt
 pip install python-nvd3
 pip install mecab-python
+pip install pydot-ng
+pip install tensorflow
+pip install keras
 exit 0
 EOF
 
